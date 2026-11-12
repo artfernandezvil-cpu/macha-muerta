@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Macha Muerta — 1996 / 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- =====================================================
+         AJUSTES VISUALES
+    ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           HISTORIA — SIN NUMEROS GIGANTES
+        ===================================================== */
+
+        .history-story {
+            display: block !important;
+            max-width: 1050px;
+            margin: 80px auto !important;
+        }
+
+        .history-story .story-number {
+            display: none !important;
+        }
+
+        .history-story .story-content {
+            width: 100% !important;
+        }
+
+        .history-story .story-content h3 {
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           PUERTO AL ROJO VIVO
+        ===================================================== */
+
+        .archive-highlight {
+            max-width: 900px !important;
+            margin: 70px auto !important;
+        }
+
+        .archive-highlight-image img {
+            max-height: 520px;
+            width: auto !important;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           VIDEOS — TAMAÑOS CONTROLADOS
+        ===================================================== */
+
+        .video-feature {
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-main {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-main img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-play {
+            position: absolute !important;
+            left: 50% !important;
+            top: 50% !important;
+            transform: translate(-50%, -50%) !important;
+
+            width: 78px;
+            height: 78px;
+
+            border-radius: 50%;
+
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+        }
+
+        .video-grid {
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-card-image {
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* =====================================================
+           DISCOS — TODOS IGUALES
+        ===================================================== */
+
+        .records-wall {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .record-card {
+            overflow: hidden;
+        }
+
+        .record-cover {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+
+        .record-cover img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block;
+        }
+
+        .record-new {
+            transform: none !important;
+        }
+
+
+        /* =====================================================
+           MEMORIA / ARCHIVO
+           AFICHES CONTROLADOS
+        ===================================================== */
+
+        .memory-grid {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+            align-items: start;
+        }
+
+        .memory-item {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .memory-item img {
+            width: 100%;
+            max-width: 100%;
+
+            height: 300px;
+
+            object-fit: contain;
+            display: block;
+        }
+
+        .memory-large img {
+            height: 360px;
+        }
+
+        .memory-item figcaption {
+            margin-top: 12px;
+        }
+
+
+        /* =====================================================
+           FECHAS — QUE NO SE COMA TODA LA PANTALLA
+        ===================================================== */
+
+        .date-poster {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .date-poster img {
+            width: 100%;
+            max-height: 780px;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        /* =====================================================
+           CONTACTO
+        ===================================================== */
+
+        .contact-email {
+            margin: 35px 0;
+        }
+
+        .contact-email a {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 22px;
+            text-decoration: none;
+        }
+
+        .contact-email a::before {
+            content: "✉";
+            font-size: 22px;
+        }
+
+
+        /* =====================================================
+           REDES — ICONOS / STICKERS
+        ===================================================== */
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 35px;
+        }
+
+        .social-links a {
+            width: 64px;
+            height: 64px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            text-decoration: none;
+
+            font-size: 0;
+            font-weight: bold;
+
+            position: relative;
+
+            transition: transform .2s ease;
+        }
+
+        .social-links a:hover {
+            transform: rotate(-5deg) scale(1.08);
+        }
+
+
+        /* Instagram */
+
+        .social-links a:nth-child(1)::before {
+            content: "◎";
+            font-size: 38px;
+        }
+
+
+        /* Facebook */
+
+        .social-links a:nth-child(2)::before {
+            content: "f";
+            font-size: 38px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* YouTube */
+
+        .social-links a:nth-child(3)::before {
+            content: "▶";
+            font-size: 27px;
+        }
+
+
+        /* Spotify */
+
+        .social-links a:nth-child(4)::before {
+            content: "♫";
+            font-size: 34px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .history-story {
+                margin: 50px auto !important;
+            }
+
+            .archive-highlight-image img {
+                max-height: 380px;
+            }
+
+            .video-play {
+                width: 60px;
+                height: 60px;
+                font-size: 23px;
+            }
+
+            .memory-item img {
+                height: 240px;
+            }
+
+            .memory-large img {
+                height: 280px;
+            }
+
+            .social-links a {
+                width: 56px;
+                height: 56px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <a href="#inicio" class="nav-logo">
+
+        <img
+            src="imagenes/logo.png"
+            alt="Macha Muerta"
+        >
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#historia">HISTORIA</a>
+
+        <a href="#musica">MÚSICA</a>
+
+        <a href="#discografia">DISCOS</a>
+
+        <a href="#memoria">MEMORIA</a>
+
+        <a href="#fechas">FECHAS</a>
+
+        <a href="#contacto">CONTACTO</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-background">
+
+        <img
+            src="imagenes/fotobanda.JPG"
+            alt="Macha Muerta"
+        >
+
+    </div>
+
+
+    <div class="hero-dark"></div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-logo">
+
+            <img
+                src="imagenes/logo.png"
+                alt="Macha Muerta"
+            >
+
+        </div>
+
+
+        <div class="hero-years">
+            1996 — 2026
+        </div>
+
+
+        <p class="hero-kicker">
+            PUNK · SKA · VALPARAÍSO
+        </p>
+
+
+        <p class="hero-description">
+
+            Tres décadas de ruido,
+            resistencia, autogestión
+            y actitud porteña.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#historia"
+                class="punk-button"
+            >
+                CONOCER LA HISTORIA
+            </a>
+
+
+            <a
+                href="#musica"
+                class="punk-button dark-button"
+            >
+                ESCUCHAR
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-stamp">
+
+        30
+        <br>
+        AÑOS
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HISTORIA
+===================================================== -->
+
+<section id="historia" class="section history-section">
+
+
+    <div class="section-label">
+        HISTORIA
+    </div>
+
+
+
+    <div class="history-title">
+
+        <h2>
+            MACHA<br>
+            MUERTA
+        </h2>
+
+
+        <div class="history-title-side">
+
+            <span>1996</span>
+
+            <span>2026</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <div class="history-intro">
+
+
+        <div class="history-intro-image">
+
+            <img
+                src="imagenes/fotobanda2.JPG"
+                alt="Macha Muerta"
+            >
+
+        </div>
+
+
+        <div class="history-intro-text">
+
+
+            <p class="big-intro">
+
+                Tres décadas de punk,
+                ska, resistencia y
+                autogestión desde
+                Valparaíso.
+
+            </p>
+
+
+            <p>
+
+                <strong>Macha Muerta</strong> es una influyente
+                banda chilena de punk y ska nacida en
+                Valparaíso en 1996. A lo largo de sus tres
+                décadas de trayectoria, se ha consolidado
+                como un referente definitivo de la resistencia
+                musical y la contracultura en el circuito
+                subterráneo porteño.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         NACIMIENTO
+    ================================================= -->
+
+    <div class="history-story">
+
+        <div class="story-content">
+
+
+            <h3>
+                NACIDOS EN EL PUERTO
+            </h3>
+
+
+            <p>
+
+                El nombre del grupo surge como una metáfora
+                socioambiental inspirada en la crisis de la
+                marea roja en las costas locales.
+
+            </p>
+
+
+            <p>
+
+                Fundada por
+                <strong>Abraham Burdiles</strong> y
+                <strong>Alejandro Arancibia</strong>, la banda
+                comenzó su camino con el demo en casete
+                <em>Los Cesantes</em>.
+
+            </p>
+
+
+            <p>
+
+                Con el tiempo se sumaron
+                <strong>Andrés Huerta y Miguel Urbina</strong>,
+                incorporándose posteriormente
+                <strong>Alan Pereira como segundo guitarrista</strong>.
+
+            </p>
+
+
+            <p>
+
+                Con esta formación, Macha Muerta comenzó
+                a ampliar su presencia dentro de la escena
+                porteña y participó en el compilado
+                <em>Puerto al Rojo Vivo</em>, uno de los registros
+                que documentan aquella escena independiente.
+
+            </p>
+
+
+            <p>
+
+                Desde sus primeros años, Macha Muerta comenzó
+                a construir una identidad marcada por la
+                autogestión, la crítica social y la energía
+                del punk porteño.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PUERTO AL ROJO VIVO
+    ================================================= -->
+
+    <div class="archive-highlight">
+
+
+        <div class="archive-highlight-image">
+
+            <img
+                src="imagenes/compiladopuerto2000.png"
+                alt="Puerto al Rojo Vivo"
+            >
+
+        </div>
+
+
+        <div class="archive-highlight-text">
+
+            <span>
+                ARCHIVO
+            </span>
+
+
+            <h3>
+                PUERTO<br>
+                AL ROJO VIVO
+            </h3>
+
+
+            <p>
+
+                Un documento de los primeros años
+                de la escena independiente porteña.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         90 / 2000
+    ================================================= -->
+
+    <div class="history-story">
+
+
+        <div class="story-content">
+
+
+            <h3>
+                EL OLOR DEL SISTEMA
+            </h3>
+
+
+            <p>
+
+                A finales de los 90 y principios de los 2000,
+                Macha Muerta saltó a escenarios masivos,
+                presentándose en festivales de fuerte
+                contenido social en el Teatro Monumental
+                y el Estadio Víctor Jara.
+
+            </p>
+
+
+            <p>
+
+                También formaron parte de las
+                <strong>Escuelas de Rock</strong>, llevando
+                himnos obreros como
+                <em>La Jornada Laboral</em>.
+
+            </p>
+
+
+            <p>
+
+                Bajo la filosofía del
+                <strong>“hazlo tú mismo”</strong>, la banda fue
+                construyendo una discografía independiente
+                que se convertiría en parte fundamental
+                de su identidad.
+
+            </p>
+
+
+            <div class="record-history">
+
+
+                <img
+                    src="imagenes/elolordelsistema1999.jpeg"
+                    alt="El Olor del Sistema"
+                >
+
+
+                <div>
+
+                    <span>
+                        1999
+                    </span>
+
+
+                    <h4>
+                        EL OLOR<br>
+                        DEL SISTEMA
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         DISCOGRAFIA DENTRO DE LA HISTORIA
+    ================================================= -->
+
+    <div class="story-discography">
+
+
+        <div class="story-discography-text">
+
+            <span>
+                DISCOGRAFÍA
+            </span>
+
+
+            <h3>
+                UNA HISTORIA
+                GRABADA
+                EN DISCOS.
+            </h3>
+
+        </div>
+
+
+        <div class="mini-records">
+
+
+            <img
+                src="imagenes/urbeconfunde2003.jpeg"
+                alt="Urbe Confunde"
+            >
+
+
+            <img
+                src="imagenes/ojosestresados2008.jpeg"
+                alt="Ojos Estresados"
+            >
+
+
+            <img
+                src="imagenes/sociedademusicossiniestros2018.jpeg"
+                alt="Sociedad de Músicos Siniestros"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         INTERNACIONAL
+    ================================================= -->
+
+    <div class="history-story">
+
+
+        <div class="story-content">
+
+
+            <h3>
+                ABRIENDO LAS FRONTERAS
+            </h3>
+
+
+            <p>
+
+                Macha Muerta sigue plenamente vigente y ha
+                logrado expandir su mensaje más allá de Chile.
+
+                A mediados de la década de los 2010,
+                la agrupación consolidó sus primeros lazos
+                fuera del país participando en giras
+                autogestionadas por
+                <strong>Argentina y Perú</strong>.
+
+            </p>
+
+
+            <p>
+
+                Posteriormente, expandieron sus fronteras
+                a otros continentes, concretando una gira
+                por <strong>Europa en 2022</strong> y desembarcando
+                con su potente directo en
+                <strong>México durante 2023</strong>.
+
+            </p>
+
+
+            <p>
+
+                Hoy continúan tocando activamente en vivo,
+                alternando potentes shows con formatos
+                acústicos a lo largo del país.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         EUROPA
+    ================================================= -->
+
+    <div class="travel-section">
+
+
+        <div class="travel-heading">
+
+            <span>
+                2022
+            </span>
+
+
+            <h3>
+                EUROPA
+            </h3>
+
+
+            <p>
+                ALEMANIA · ESPAÑA · ITALIA
+            </p>
+
+        </div>
+
+
+        <div class="europe-gallery">
+
+
+            <img
+                src="imagenes/prensaeuropa.jpg"
+                alt="Prensa gira Europa"
+                class="europe-main"
+            >
+
+
+            <img
+                src="imagenes/aficheeuropa1.jpg"
+                alt="Afiche Europa"
+            >
+
+
+            <img
+                src="imagenes/aficheeuropa2.jpg"
+                alt="Afiche Europa"
+            >
+
+
+            <img
+                src="imagenes/aficheeuropa3.jpg"
+                alt="Afiche Europa"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         MEXICO
+    ================================================= -->
+
+    <div class="travel-section mexico-section">
+
+
+        <div class="travel-heading">
+
+            <span>
+                2023
+            </span>
+
+
+            <h3>
+                MÉXICO
+            </h3>
+
+
+            <p>
+                NUEVAS FRONTERAS · MISMO RUIDO
+            </p>
+
+        </div>
+
+
+        <div class="mexico-gallery">
+
+
+            <img
+                src="imagenes/fotopiramidesmexico.jpg"
+                alt="Macha Muerta en México"
+                class="mexico-main"
+            >
+
+
+            <img
+                src="imagenes/afichemexico1.jpg"
+                alt="Afiche gira México"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CIERRE
+    ================================================= -->
+
+    <div class="history-ending">
+
+
+        <strong>
+
+            30 AÑOS DESPUÉS,<br>
+            EL RUIDO SIGUE.
+
+        </strong>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MÚSICA
+===================================================== -->
+
+<section id="musica" class="section music-section">
+
+
+    <div class="section-label">
+        MÚSICA
+    </div>
+
+
+    <h2>
+
+        RUIDO.<br>
+        DISTORSIÓN.<br>
+        ACTITUD.
+
+    </h2>
+
+
+
+    <!-- =================================================
+         VIDEO OFICIAL PRINCIPAL
+    ================================================= -->
+
+    <div class="video-feature">
+
+
+        <div class="video-main">
+
+
+            <a
+                href="https://youtu.be/pSrUxkDGBIY"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <img
+                    src="https://i.ytimg.com/vi/pSrUxkDGBIY/hqdefault.jpg"
+                    alt="Video oficial Macha Muerta"
+                >
+
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+
+            </a>
+
+        </div>
+
+
+        <div class="video-feature-info">
+
+
+            <span>
+                VIDEO DESTACADO
+            </span>
+
+
+            <h3>
+                OFICIAL
+            </h3>
+
+
+            <p>
+                El video oficial destacado
+                de Macha Muerta.
+            </p>
+
+
+            <a
+                href="https://youtu.be/pSrUxkDGBIY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="punk-button"
+            >
+                VER VIDEO →
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         OFICIALES
+    ================================================= -->
+
+    <div class="music-subtitle">
+        VIDEOS OFICIALES
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <a
+            href="https://youtu.be/7KZrfsSnM14"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-card"
+        >
+
+            <div class="video-card-image">
+
+                <img
+                    src="https://i.ytimg.com/vi/7KZrfsSnM14/hqdefault.jpg"
+                    alt="Video oficial"
+                >
+
+                <span>▶</span>
+
+            </div>
+
+
+            <h3>
+                VIDEO OFICIAL
+            </h3>
+
+        </a>
+
+
+
+        <a
+            href="https://youtu.be/TYyLknGrKYw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-card"
+        >
+
+            <div class="video-card-image">
+
+                <img
+                    src="https://i.ytimg.com/vi/TYyLknGrKYw/hqdefault.jpg"
+                    alt="Video oficial"
+                >
+
+                <span>▶</span>
+
+            </div>
+
+
+            <h3>
+                VIDEO OFICIAL
+            </h3>
+
+        </a>
+
+
+
+        <a
+            href="https://youtu.be/3efGJoRQnyc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-card"
+        >
+
+            <div class="video-card-image">
+
+                <img
+                    src="https://i.ytimg.com/vi/3efGJoRQnyc/hqdefault.jpg"
+                    alt="Video oficial"
+                >
+
+                <span>▶</span>
+
+            </div>
+
+
+            <h3>
+                VIDEO OFICIAL
+            </h3>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         EN VIVO
+    ================================================= -->
+
+    <div class="music-subtitle live-subtitle">
+        EN VIVO
+    </div>
+
+
+    <div class="video-feature">
+
+
+        <div class="video-main">
+
+
+            <a
+                href="https://youtu.be/qCmBfRZ-j1E"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+
+                <img
+                    src="https://i.ytimg.com/vi/qCmBfRZ-j1E/hqdefault.jpg"
+                    alt="Macha Muerta en vivo"
+                >
+
+
+                <div class="video-play">
+                    ▶
+                </div>
+
+
+            </a>
+
+        </div>
+
+
+        <div class="video-feature-info">
+
+
+            <span>
+                REGISTRO EN VIVO
+            </span>
+
+
+            <h3>
+                EN VIVO
+            </h3>
+
+
+            <p>
+                Macha Muerta tocando
+                en directo.
+            </p>
+
+
+            <a
+                href="https://youtu.be/qCmBfRZ-j1E"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="punk-button"
+            >
+                VER EN YOUTUBE →
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="video-grid">
+
+
+        <a
+            href="https://youtu.be/hEudpqQizOY"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-card"
+        >
+
+            <div class="video-card-image">
+
+                <img
+                    src="https://i.ytimg.com/vi/hEudpqQizOY/hqdefault.jpg"
+                    alt="Macha Muerta en vivo"
+                >
+
+                <span>▶</span>
+
+            </div>
+
+
+            <h3>
+                EN VIVO
+            </h3>
+
+        </a>
+
+
+
+        <a
+            href="https://youtu.be/oRhLajE7ouE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-card"
+        >
+
+            <div class="video-card-image">
+
+                <img
+                    src="https://i.ytimg.com/vi/oRhLajE7ouE/hqdefault.jpg"
+                    alt="Macha Muerta en vivo"
+                >
+
+                <span>▶</span>
+
+            </div>
+
+
+            <h3>
+                EN VIVO
+            </h3>
+
+        </a>
+
+
+
+        <a
+            href="https://youtu.be/kEM5HYyLAnQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="video-card"
+        >
+
+            <div class="video-card-image">
+
+                <img
+                    src="https://i.ytimg.com/vi/kEM5HYyLAnQ/hqdefault.jpg"
+                    alt="Macha Muerta en vivo"
+                >
+
+                <span>▶</span>
+
+            </div>
+
+
+            <h3>
+                EN VIVO
+            </h3>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         YOUTUBE
+    ================================================= -->
+
+    <div class="platform-box">
+
+
+        <div>
+
+            <span>
+                YOUTUBE
+            </span>
+
+
+            <p>
+
+                Videos oficiales, registros en vivo
+                y material audiovisual.
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://www.youtube.com/@machamuerta4956"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="punk-button"
+        >
+            IR AL CANAL →
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SPOTIFY
+    ================================================= -->
+
+    <div class="spotify-box">
+
+
+        <div class="spotify-heading">
+
+            <span>
+                SPOTIFY
+            </span>
+
+
+            <p>
+
+                Escucha Macha Muerta directamente
+                desde la página.
+
+            </p>
+
+        </div>
+
+
+        <iframe
+            src="https://open.spotify.com/embed/artist/4s099xNDlEVvIoTtcMCcH9?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCOGRAFÍA
+===================================================== -->
+
+<section id="discografia" class="section discography-section">
+
+
+    <div class="section-label">
+        DISCOGRAFÍA
+    </div>
+
+
+    <h2>
+        CINCO<br>
+        DISCOS.
+    </h2>
+
+
+    <div class="records-wall">
+
+
+        <article class="record-card">
+
+
+            <div class="record-cover">
+
+                <img
+                    src="imagenes/elolordelsistema1999.jpeg"
+                    alt="El Olor del Sistema"
+                >
+
+            </div>
+
+
+            <div class="record-info">
+
+                <span>
+                    1999
+                </span>
+
+
+                <h3>
+                    EL OLOR<br>
+                    DEL SISTEMA
+                </h3>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="record-card">
+
+
+            <div class="record-cover">
+
+                <img
+                    src="imagenes/urbeconfunde2003.jpeg"
+                    alt="Urbe Confunde"
+                >
+
+            </div>
+
+
+            <div class="record-info">
+
+                <span>
+                    2003
+                </span>
+
+
+                <h3>
+                    URBE<br>
+                    CONFUNDE
+                </h3>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="record-card">
+
+
+            <div class="record-cover">
+
+                <img
+                    src="imagenes/ojosestresados2008.jpeg"
+                    alt="Ojos Estresados"
+                >
+
+            </div>
+
+
+            <div class="record-info">
+
+                <span>
+                    2008
+                </span>
+
+
+                <h3>
+                    OJOS<br>
+                    ESTRESADOS
+                </h3>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="record-card">
+
+
+            <div class="record-cover">
+
+                <img
+                    src="imagenes/sociedademusicossiniestros2018.jpeg"
+                    alt="Sociedad de Músicos Siniestros"
+                >
+
+            </div>
+
+
+            <div class="record-info">
+
+                <span>
+                    2018
+                </span>
+
+
+                <h3>
+                    SOCIEDAD DE<br>
+                    MÚSICOS SINIESTROS
+                </h3>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="record-card">
+
+
+            <div class="record-cover">
+
+                <img
+                    src="imagenes/sangrenueva2022.jpg"
+                    alt="Sangre Nueva para Nuestras Viejas Derrotas"
+                >
+
+            </div>
+
+
+            <div class="record-info">
+
+                <span>
+                    2022
+                </span>
+
+
+                <h3>
+                    SANGRE NUEVA PARA<br>
+                    NUESTRAS VIEJAS DERROTAS
+                </h3>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMORIA / ARCHIVO VIVO
+===================================================== -->
+
+<section id="memoria" class="section memory-section">
+
+
+    <div class="section-label">
+        MEMORIA
+    </div>
+
+
+    <h2>
+        ARCHIVO<br>
+        VIVO.
+    </h2>
+
+
+    <p class="memory-intro">
+
+        Afiches, fotografías y documentos
+        que forman parte de la historia
+        de Macha Muerta.
+
+    </p>
+
+
+    <div class="memory-grid">
+
+
+        <figure class="memory-item memory-large">
+
+            <img
+                src="imagenes/aficheantiguo.jpg"
+                alt="Afiche antiguo"
+            >
+
+            <figcaption>
+                ARCHIVO HISTÓRICO
+            </figcaption>
+
+        </figure>
+
+
+
+        <figure class="memory-item">
+
+            <img
+                src="imagenes/aficheantiguo2.jpg"
+                alt="Afiche antiguo"
+            >
+
+            <figcaption>
+                ARCHIVO HISTÓRICO
+            </figcaption>
+
+        </figure>
+
+
+
+        <figure class="memory-item">
+
+            <img
+                src="imagenes/prensaeuropa.jpg"
+                alt="Prensa Europa"
+            >
+
+            <figcaption>
+                PRENSA — EUROPA
+            </figcaption>
+
+        </figure>
+
+
+
+        <figure class="memory-item">
+
+            <img
+                src="imagenes/aficheeuropa1.jpg"
+                alt="Afiche Europa"
+            >
+
+            <figcaption>
+                GIRA EUROPA
+            </figcaption>
+
+        </figure>
+
+
+
+        <figure class="memory-item">
+
+            <img
+                src="imagenes/aficheeuropa2.jpg"
+                alt="Afiche Europa"
+            >
+
+            <figcaption>
+                GIRA EUROPA
+            </figcaption>
+
+        </figure>
+
+
+
+        <figure class="memory-item">
+
+            <img
+                src="imagenes/aficheeuropa3.jpg"
+                alt="Afiche Europa"
+            >
+
+            <figcaption>
+                GIRA EUROPA
+            </figcaption>
+
+        </figure>
+
+
+
+        <figure class="memory-item">
+
+            <img
+                src="imagenes/afichemexico1.jpg"
+                alt="Afiche México"
+            >
+
+            <figcaption>
+                GIRA MÉXICO
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FECHAS
+===================================================== -->
+
+<section id="fechas" class="section dates-section">
+
+
+    <div class="section-label">
+        FECHAS
+    </div>
+
+
+    <h2>
+        PRÓXIMAS<br>
+        FECHAS.
+    </h2>
+
+
+    <div class="date-poster">
+
+        <img
+            src="imagenes/proximafecha.jpg"
+            alt="Próximas fechas Macha Muerta"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section id="contacto" class="contact-section">
+
+
+    <div class="section-label">
+        CONTACTO
+    </div>
+
+
+    <h2>
+
+        HABLEMOS.<br>
+        SIGAMOS<br>
+        HACIENDO RUIDO.
+
+    </h2>
+
+
+    <p class="contact-email">
+
+
+        <a
+            href="mailto:machamuerta1996@gmail.com"
+            class="punk-button"
+        >
+
+            ESCRÍBENOS
+
+        </a>
+
+
+    </p>
+
+
+    <div class="social-links">
+
+
+        <a
+            href="https://www.instagram.com/macha_muerta/?hl=es"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+            INSTAGRAM
+        </a>
+
+
+        <a
+            href="https://www.facebook.com/share/1FDgvvFa2q/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+        >
+            FACEBOOK
+        </a>
+
+
+        <a
+            href="https://www.youtube.com/@machamuerta4956"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+        >
+            YOUTUBE
+        </a>
+
+
+        <a
+            href="https://open.spotify.com/intl-es/artist/4s099xNDlEVvIoTtcMCcH9"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Spotify"
+        >
+            SPOTIFY
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <img
+            src="imagenes/logo.png"
+            alt="Macha Muerta"
+        >
+
+    </div>
+
+
+    <div class="footer-info">
+
+        <strong>
+            MACHA MUERTA
+        </strong>
+
+
+        <span>
+            VALPARAÍSO — CHILE
+        </span>
+
+
+        <span>
+            1996 — 2026
+        </span>
+
+    </div>
+
+
+    <div class="footer-diy">
+
+        HAZLO<br>
+        TÚ MISMO.
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
